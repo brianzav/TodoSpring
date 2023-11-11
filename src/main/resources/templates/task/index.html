@@ -8,7 +8,9 @@
     <h1>Epic Task</h1>
     <p th:text="${tasks}"> </p>
 <ul>
-    <li th:each="task : ${tasks}">test</li>
+    <li th:each="task : ${tasks}" th:text="${task.title}" class="color-li">
+
+    </li>
 </ul>
 </body>
 </html>

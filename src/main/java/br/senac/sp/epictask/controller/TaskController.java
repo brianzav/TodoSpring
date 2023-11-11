@@ -16,6 +16,7 @@ public class TaskController {
 
     @GetMapping
     public String index(Model model){
+
         var lista = repository.findAll();
         model.addAttribute("tasks", lista);
         return "task/index";
