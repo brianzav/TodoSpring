@@ -27,7 +27,7 @@ public class TaskController {
     }
 
     @GetMapping("new") //localhost:8080/task/new
-    public String form(){
+    public String form(Task task){
 
         return "task/form";
 
