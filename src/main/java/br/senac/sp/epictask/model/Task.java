@@ -19,10 +19,10 @@ public class Task {
     // not null
     //         not empty
 
-    @Size(min = 10)
+    @Size(min = 10, message = "digite uma descrição com pelo menos 10 caracteres")
     String description;
 
-    @Min(1)
+    @Min(value = 1, message = "não pode ser negativo")
     Integer score;
 
 }
