@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -10,15 +10,15 @@
 <h1>Cadastrar Tarefa</h1>
 
 <div class ="content">
-    <form action = "" method="post">
+    <form action = "" method="post" th:object="${task}">
         <label for="title">Título</label>
-        <input type="text" id="title" name="title">
+        <input type="text"  th:field="*{title}">
 
         <label for="description">Descrição</label>
-        <textarea id ="description" name="description"></textarea>
+        <textarea th:field="*{description}"></textarea>
 
         <label for="score">Pontos</label>
-        <input type="number" id="score" name="score">
+        <input type="number" th:field="*{score}">
 
         <div class="actions">
 
