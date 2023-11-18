@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Epic Task</h1>
-    <p th:text="${tasks}"> </p>
-<ul>
-    <li th:each="task : ${tasks}" th:text="${task.title}" class="color-li">
 
-    </li>
+
+    <a href="/task/new" class="btn">Nova Tarefa</a>
+
+    <div class="content">
+        <div class="tasks">
+            <div class="card-task" th:each="task : ${tasks}">
+            <h2 th:text="${task.title}"></h2>
+            <p th:text="${task.description}"></p>
+        </div>
+    </div>
+    </div>
 </ul>
 </body>
 </html>
