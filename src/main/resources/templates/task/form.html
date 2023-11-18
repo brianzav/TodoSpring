@@ -13,12 +13,17 @@
     <form action = "" method="post" th:object="${task}">
         <label for="title">Título</label>
         <input type="text"  th:field="*{title}">
+        <span th:errors="*{title}"></span>
 
         <label for="description">Descrição</label>
         <textarea th:field="*{description}"></textarea>
+        <span th:errors="*{description}"></span>
+
 
         <label for="score">Pontos</label>
         <input type="number" th:field="*{score}">
+        <span th:errors="*{score}"></span>
+
 
         <div class="actions">
 
