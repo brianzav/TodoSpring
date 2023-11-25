@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Epic Task</h1>
+    <h1>Meus assistidos</h1>
 
 
-    <a href="/task/new" class="btn">Nova Tarefa</a>
+    <a href="/task/new" class="btn">Novo filme/série</a>
 
     <div class="content">
         <div class="tasks">
@@ -18,7 +18,7 @@
             <p th:text="${task.description}"></p>
             <div class="actions">
                 <form th:action="@{'/task/{id}' (id=${task.id})}" th:method="delete">
-                    <button class="btn red">apagar</button>
+                    <button class="btn red"><a href=""></a>pagar</button>
                 </form>
             </div>
 
