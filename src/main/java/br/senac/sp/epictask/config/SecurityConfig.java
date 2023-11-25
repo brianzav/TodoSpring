@@ -11,7 +11,7 @@ public class SecurityConfig  {
     @Bean
     public SecurityFilterChain config(HttpSecurity http) throws Exception {
         return http
-                .oauth2Client(Customizer.withDefaults())
+                .oauth2Login(auth -> auth.defaultSuccessUrl("/task"))
                 .build();
     }
 }
