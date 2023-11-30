@@ -22,8 +22,12 @@
 html, body {height:100%;}
 
 body{
-    background: rgb(158,135,135);
-background: linear-gradient(90deg, rgba(158,135,135,1) 35%, rgba(189,21,21,0.9500175070028011) 72%, rgba(0,0,0,1) 93%);
+    
+    background: linear-gradient(90deg, rgba(158, 135, 135, 1) 35%, rgba(189, 21, 21, 0.95) 72%, rgba(0, 0, 0, 1) 93%);
+    background-size: 200% 100%;
+    animation: gradientMovement 10s linear infinite alternate-reverse;
+    background-size: 200% 100%;
+
     font-family: var(--primary-font);
     text-decoration: none;
     color: var(--font-color);
@@ -416,3 +420,11 @@ footer {
     }
 }
 
+@keyframes gradientMovement {
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
