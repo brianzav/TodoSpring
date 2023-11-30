@@ -3,10 +3,10 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 :root{
-    --dark-color: #1F1F1F;
-    --active-color: #E23221;
+    --dark-color: rgba(224, 228, 13, 0.76);
+    --active-color: #e2bf21;
     --primary-font: 'Pridi', serif;
-    --font-color:  rgba(255,255,255,0.8);
+    --font-color:  rgba(0, 0, 0, 0.8);
 }
 
 *{
@@ -22,7 +22,8 @@
 html, body {height:100%;}
 
 body{
-    background: var(--dark-color);
+    background: rgb(158,135,135);
+background: linear-gradient(90deg, rgba(158,135,135,1) 35%, rgba(189,21,21,0.9500175070028011) 72%, rgba(0,0,0,1) 93%);
     font-family: var(--primary-font);
     text-decoration: none;
     color: var(--font-color);
@@ -40,6 +41,23 @@ body{
 
 }
 
+a:hover{
+    transform: scale(1.1);
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+.box-main{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
 a{
     text-decoration: none;
     color:var(--font-color);
@@ -51,7 +69,7 @@ a:visited{
 
 .yellow, a.yellow { color: #FED851 }
 .red, a.red { color: #BF0059 }
-.blue { color: #13AFE0 }
+.white { color: #f1f1f1 }
 
 nav {
     max-width: 1200px;
@@ -82,8 +100,12 @@ nav li .active {
 
 nav li a:hover{
     color: var(--active-color);
+
 }
 
+ a .btn:hover{
+    color: var(--active-color);
+}
 .nav-user{
     display: flex;
     align-items: center;
@@ -342,6 +364,7 @@ button.btn{
     color: #E23221;
 }
 
+
 .btn-down span:hover{
     text-shadow: 0px 0px 5px #E23221, 0px 0px 15px #E23221;
 }
@@ -368,6 +391,28 @@ footer {
     .tasks{
         grid-template-columns: 1fr;
 
+    }
+}
+
+/* Efeito de hover para botões */
+.btn:hover {
+    transform: scale(1.1);
+}
+/* Animação de fade-in para elementos */
+.animar {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeAndSlideIn 1s ease-out forwards;
+}
+
+@keyframes fadeAndSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 

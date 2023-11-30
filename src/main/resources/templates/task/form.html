@@ -6,33 +6,28 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <main class="box-main animar">
+        <div class="content">
+            <h1>Cadastrar Assistido</h1>
+            <form th:action="${'/task/new'}" method="post" th:object="${task}" class="form-task">
+                <label for="title" class="form-label">Título</label>
+                <input type="text" th:field="*{title}" class="form-input">
+                <span th:errors="*{title}" class="form-error"></span>
 
-<h1>Cadastrar Assistido</h1>
+                <label for="description" class="form-label">Descrição</label>
+                <textarea th:field="*{description}" class="form-textarea"></textarea>
+                <span th:errors="*{description}" class="form-error"></span>
 
-<div class ="content">
-    <form th:action = "${'/task/new'}" method="post" th:object="${task}">
-        <label for="title">Título</label>
-        <input type="text"  th:field="*{title}">
-        <span th:errors="*{title}"></span>
+                <label for="score" class="form-label">Pontos</label>
+                <input type="number" th:field="*{score}" class="form-input">
+                <span th:errors="*{score}" class="form-error"></span>
 
-        <label for="description">Descrição</label>
-        <textarea th:field="*{description}"></textarea>
-        <span th:errors="*{description}"></span>
-
-
-        <label for="score">Pontos</label>
-        <input type="number" th:field="*{score}">
-        <span th:errors="*{score}"></span>
-
-
-        <div class="actions">
-
-            <a href="/task" class="btn">Cancelar</a>
-            <button class="btn blue">salvar</button>
-
+                <div class="actions">
+                    <a href="/task" class="btn btn-cancel">Cancelar</a>
+                    <button class="btn btn-save">Salvar</button>
+                </div>
+            </form>
         </div>
-    </form>
-</div>
-
+    </main>
 </body>
 </html>
